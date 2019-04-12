@@ -11,3 +11,6 @@
 .item-active {
     border: 1px solid red;
 }
+.doit input {
+    margin: 10px 15px;
+}

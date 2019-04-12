@@ -9,11 +9,20 @@
 </head>
 <body>
 
-    <input type="text" name="num1"> +
-    <input type="text" name="num2"> 
-    <input type="button" name="calc" value="ровно">
-
-    <span class="res"></span>
+    <input type="text" class="numberInput" name="num1">
+    <input type="text" class="numberInput" name="num2"> 
+    <input type="button" name="res" value="=">
+    <div class="doit">
+        <input type="button" name="addition" value="+">
+        <input type="button" name="subtraction" value="-">
+        <input type="button" name="division" value="/">
+        <input type="button" name="multiplication" value="*">
+    </div>
+   
+    <p>
+        Результат: <span class="res"></span>
+    </p>
+    
     
     <script src="main.js"></script>
 </body>

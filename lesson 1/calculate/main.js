@@ -5,50 +5,42 @@ window.onload = function(e){
     var division = document.querySelector('input[name=division]');
     var multiplication = document.querySelector('input[name=multiplication]');
     var calc = document.querySelector('input[name=res]');
+    var num1 = document.querySelector('input[name=num1]');
+    var num2 = document.querySelector('input[name=num2]');
 
     var res = document.querySelector('.res');
 
     calc.onclick = function() {
-        var num1 = document.querySelector('input[name=num1]').value;
-        var num2 = document.querySelector('input[name=num2]').value;
-        var resnum = parseInt(num1) + parseInt(num2);
-        calc.disabled = true;
+        var resnum = parseInt(num1.value) + parseInt(num2.value);
+        this.disabled = true;
         res.innerHTML = resnum;
     }
 
-    var changeInput = document.querySelectorAll('.numberInput');
-    // var changeInput = document.querySelector('input[name=num1]');
-    console.log(changeInput);
 
-    changeInput.oninput = function() {
+
+    var num1 = inputEnabled;
+    var num2 = inputEnabled;
+
+    function inputEnabled() {
         calc.disabled = false;
-    }
+    };
 
     addition.onclick = function() {
-        var num1 = document.querySelector('input[name=num1]').value;
-        var num2 = document.querySelector('input[name=num2]').value;
-        var resnum = parseInt(num1) + parseInt(num2);
+        var resnum = parseInt(num1.value) + parseInt(num1.value);
         res.innerHTML = resnum;
     }
     subtraction.onclick = function() {
-        var num1 = document.querySelector('input[name=num1]').value;
-        var num2 = document.querySelector('input[name=num2]').value;
-        var resnum = parseInt(num1) - parseInt(num2);
+        var resnum = parseInt(num1.value) - parseInt(num1.value);
         res.innerHTML = resnum;
     }
     division.onclick = function() {
-        var num1 = document.querySelector('input[name=num1]').value;
-        var num2 = document.querySelector('input[name=num2]').value;
-        var resnum = parseInt(num1) / parseInt(num2);
+        var resnum = parseInt(num1.value) / parseInt(num1.value);
         res.innerHTML = resnum;
     }
     multiplication.onclick = function() {
-        var num1 = document.querySelector('input[name=num1]').value;
-        var num2 = document.querySelector('input[name=num2]').value;
-        var resnum = parseInt(num1) * parseInt(num2);
+        var resnum = parseInt(num1.value) * parseInt(num1.value);
         res.innerHTML = resnum;
     }
 
-    
 }
 
